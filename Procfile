@@ -1,1 +1,1 @@
-web: gunicorn rev_finance_2023.wsgi
+web: gunicorn ngo_project.wsgi
