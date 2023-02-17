@@ -1,0 +1,28 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+<!-- Whatever wants to be import or link that goes in the HEAD of HTML goes in this page-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- NAVBAR goes here -->
+
+    {% block content%}
+
+<!-- HERE will render what you put in each other html -->
+    
+{% endblock %}
+    
+<!-- FOOTER goes here -->
+
+</body>
+</html>
