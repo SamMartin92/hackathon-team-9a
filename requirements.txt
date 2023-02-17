@@ -1,8 +1,8 @@
 asgiref==3.6.0
-backports.zoneinfo;python_version<"3.9"
-dj-database-url==1.2.0
-Django==4.1.7
+dj-database-url==0.5.0
+Django==3.2.18
+django-richtextfield==1.6.1
 gunicorn==20.1.0
 psycopg2==2.9.5
+pytz==2022.7.1
 sqlparse==0.4.3
-python3-openid==3.2.0

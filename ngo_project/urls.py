@@ -19,4 +19,5 @@ from django.urls import include, path
 urlpatterns = [
     path('', include('blog.urls')),
     path('admin/', admin.site.urls),
+    path('djrichtextfield/', include('djrichtextfield.urls')),
 ]
