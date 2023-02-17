@@ -48,8 +48,12 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'djrichtextfield',
+    'crispy_forms',
     'blog',
 ]
+
+
+CRISP_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
