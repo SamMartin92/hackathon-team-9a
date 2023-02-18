@@ -2,8 +2,29 @@
 
 {% block content %}
 
-<!-- What goes here will render as body of the page -->
-
-
+<div class="container mt-nav">
+    <div class="row col-12 mt-3 left">
+        <div class="row">
+            {% for ngo in ngo_list %}
+            <div class="col">
+                <a class="" href="#">
+                    <!-- Featured image -->
+                    <img src="#" class="d-block w-100" alt="{{ ngo.name }} image">
+                </a>
+                <div class="mb-3">
+                    <h5>{{ ngo.name }}</h5>
+                    <a class="" href="#">
+                        <p>#{{ ngo.category }}</p>
+                    </a>
+                </div>
+            </div>
+        {% if forloop.counter|divisibleby:4 %}
+        </div>
+        <div class="row">
+        {% endif %}
+        {% endfor %}
+        </div>
+    </div>
+</div>
 
 {% endblock %}
