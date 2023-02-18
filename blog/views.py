@@ -61,3 +61,11 @@ class NGODetails(View):
                 "ngo": ngo,
             },
         )
+
+
+def about(request):
+    return render(request, 'about.html')
+
+
+def setup(request):
+    return render(request, 'setup.html')
