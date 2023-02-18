@@ -11,8 +11,15 @@ from .forms import AddNGOForm
 # Create your views here.
 
 
-def index(request):
-    return render(request, 'index.html')
+class Index(generic.ListView):
+    def get(self, request):
+        ngos = NGO.objects.all()[:8]
+        feature_ngo = NGO.objects.all()[NGO.objects.count()-1]
+        context = {
+                "ngos": ngos,
+                "feature_ngo": feature_ngo,
+                }
+        return render(request, 'index.html', context)
 
 
 class AddNGOForm(CreateView):
