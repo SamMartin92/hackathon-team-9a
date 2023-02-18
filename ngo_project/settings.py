@@ -34,6 +34,9 @@ CSRF_TRUSTED_ORIGINS = []
 
 SITE_ID = 1
 
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
 
 # Application definition
 

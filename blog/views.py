@@ -1,6 +1,4 @@
-from django.shortcuts import render
-
-from django.shortcuts import redirect
+from django.shortcuts import render, redirect
 from django.views import generic, View
 from django.views.generic import UpdateView, ListView, CreateView
 from django.contrib import messages
@@ -11,8 +9,15 @@ from .forms import AddNGOForm
 # Create your views here.
 
 
-def index(request):
-    return render(request, 'index.html')
+class Index(generic.ListView):
+    def get(self, request):
+        ngos = NGO.objects.all()[:8]
+        feature_ngo = NGO.objects.all()[NGO.objects.count()-1]
+        context = {
+                "ngos": ngos,
+                "feature_ngo": feature_ngo,
+                }
+        return render(request, 'index.html', context)
 
 
 class AddNGOForm(CreateView):
@@ -34,6 +39,7 @@ class NGOList(ListView):
     """
     model = NGO
     template_name = 'listview.html'
+    ngo_list = NGO.objects.all()
 
     def get_context_data(self, *args, **kwargs):
         context = super(NGOList, self).get_context_data(*args, **kwargs)

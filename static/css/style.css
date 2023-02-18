@@ -1,4 +1,10 @@
 /* Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
 /* Float Effect - Links */
 .hvr-float {
     display: inline-block;
@@ -28,7 +34,6 @@
 
 .navbar-nav .nav-item .nav-link {
     color: white;
-    text-shadow: #234c3a 3px 0px 3px;
     font-weight: 500;
     padding: 20px;
 }
@@ -39,7 +44,6 @@
 
 #offcanvasNavbar {
     background-color: #239873;
-    text-shadow: #234c3a 3px 0px 3px;
     max-width: 70vw;
     color: white;
 }
@@ -122,4 +126,56 @@ footer h5 {
     font-weight: 500;
     text-shadow: #234c3a 2px 0px 3px;
     text-decoration: none;
+}
+
+/* Hero image */
+
+#hero-outer {
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+
+    /* Change position to relative and cover-text to absolute to get it fixed in the section. */
+    position: relative;
+}
+
+#hero-image {
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    /******* URL TO BE CHANGED *******/
+    background: url('https://img.freepik.com/free-vector/people-donate-money-charity_107791-16828.jpg?w=1380&t=st=1676725629~exp=1676726229~hmac=9b162f46bdb677e6361be7de600b9edb1aecace7cf57730e597638826362d7ed') no-repeat center center;
+    background-size: cover;
+}
+
+/* Text over hero image */
+
+#cover-text h2 {
+    color: #000000;
+}
+
+#cover-text {
+    font-size: 130%;
+    letter-spacing: 2px;
+    text-align: center;
+
+    width: 100%;
+    height: 120px;
+
+    background-color: rgb(254, 238, 223, .7);
+    bottom: 0px;
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+#cover-text h2 {
+    margin: 20px;
+    align-self: center;
+}
+
+/* NGOs Listview */
+.mt-nav {
+    margin-top: 140px;
 }
