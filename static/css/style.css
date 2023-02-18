@@ -43,6 +43,7 @@ body {
     color: white;
     font-weight: 500;
     padding: 20px;
+    text-shadow: #234c3a 2px 0px 3px;
 }
 
 .navbar {
@@ -53,6 +54,7 @@ body {
     background-color: #239873;
     max-width: 70vw;
     color: white;
+    text-shadow: #234c3a 2px 0px 3px;
 }
 
 .navbar-toggler {
