@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
 from django.views.generic import UpdateView, ListView, CreateView
 from django.contrib import messages
@@ -45,3 +45,19 @@ class NGOList(ListView):
         context = super(NGOList, self).get_context_data(*args, **kwargs)
         return context
 
+
+class NGODetails(View):
+    """
+    NGO details
+    """
+    def get(self, request, *args, **kwargs):
+        queryset = NGO.objects.all()
+        ngo = get_object_or_404(queryset, pk=self.kwargs['pk'])
+
+        return render(
+            request,
+            "detail.html",
+            {
+                "ngo": ngo,
+            },
+        )
