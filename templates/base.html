@@ -40,7 +40,10 @@
     <!-- NAVBAR goes here -->
     <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary navbar-custom-style">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Logo</a>
+            <a id="logo" class="navbar-brand" href="#">
+                <img src="{% static 'media/images/logo.png' %}" alt="Local Loving Logo" height="75px" width="73px">
+                <h2 class="d-inline-block align-middle lh-1">Local<br>Loving</h2>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar" aria-label="Open Menu">
                 <span class="navbar-toggler-icon"></span>
@@ -97,7 +100,6 @@
                 </div>
             </div>
     </nav>
-
     <!-- Message success after adding a new NGO -->
     {% if messages %}
     {% for message in messages %}
