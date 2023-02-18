@@ -1,6 +1,4 @@
-from django.shortcuts import render
-
-from django.shortcuts import redirect
+from django.shortcuts import render, redirect
 from django.views import generic, View
 from django.views.generic import UpdateView, ListView, CreateView
 from django.contrib import messages
@@ -41,6 +39,7 @@ class NGOList(ListView):
     """
     model = NGO
     template_name = 'listview.html'
+    ngo_list = NGO.objects.all()
 
     def get_context_data(self, *args, **kwargs):
         context = super(NGOList, self).get_context_data(*args, **kwargs)
