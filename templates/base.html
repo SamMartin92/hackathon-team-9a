@@ -40,7 +40,7 @@
     <!-- NAVBAR goes here -->
     <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary navbar-custom-style">
         <div class="container-fluid">
-            <a id="logo" class="navbar-brand" href="#">
+            <a id="logo" class="navbar-brand" href="{% url 'index' %}">
                 <img src="{% static 'media/images/logo.png' %}" alt="Local Loving Logo" height="75px" width="73px">
                 <h2 class="d-inline-block align-middle lh-1">Local<br>Loving</h2>
             </a>
@@ -60,7 +60,7 @@
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-4">
                             <!-- Navbar links for all users -->
                             <li class="nav-item">
-                                <a class="nav-link hvr-float" href="#"><i
+                                <a class="nav-link hvr-float" href="{% url 'index' %}"><i
                                         class="fa-solid fa-house pe-3 d-lg-none"></i>Home</a>
                             </li>
                             <li class="nav-item">
@@ -68,11 +68,11 @@
                                         class="fa-solid fa-pen pe-3 d-lg-none"></i>NGOs</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link hvr-float" href="#"><i
+                                <a class="nav-link hvr-float" href="{% url 'about' %}"><i
                                         class="fa-solid fa-circle-info pe-3 d-lg-none"></i>About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link hvr-float" href="#"><i
+                                <a class="nav-link hvr-float" href="{% url 'setup' %}"><i
                                         class="fa-solid fa-circle-question pe-3 d-lg-none"></i>How to Setup an NGO</a>
                             </li>
                             <!-- Navbar links for authenticated users -->
@@ -106,9 +106,6 @@
     <div class="alert alert-success alert-css" id="message" data="modal" data-toggle="modal" role="alert"
         style="z-index:15">
         {{ message }}
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
     </div>
     {% endfor %}
     {% endif %}
@@ -145,21 +142,32 @@
             </div>
             <div class="col-12 col-md-4 m-auto">
                 <div class="row text-center flex-nowrap">
-                    <a class="col github-link hvr-float" href=""><i class="fa-brands fa-github github-logo"></i><br>Ant</a>
-                    <a class="col github-link hvr-float" href=""><i class="fa-brands fa-github github-logo"></i><br>Carmen</a>
-                    <a class="col github-link hvr-float" href=""><i class="fa-brands fa-github github-logo"></i><br>Hannah</a>
-                    <a class="col github-link hvr-float" href=""><i class="fa-brands fa-github github-logo"></i><br>Ivette</a>
+                    <a class="col github-link hvr-float" href="https://github.com/Ant2210" target="_blank"><i class="fa-brands fa-github github-logo"></i><br>Ant</a>
+                    <a class="col github-link hvr-float" href="https://github.com/CarmenCantudo" target="_blank"><i class="fa-brands fa-github github-logo"></i><br>Carmen</a>
+                    <a class="col github-link hvr-float" href="https://github.com/HPCarey" target="_blank"><i class="fa-brands fa-github github-logo"></i><br>Hannah</a>
+                    <a class="col github-link hvr-float" href="https://github.com/IvetteMcDermott" target="_blank"><i class="fa-brands fa-github github-logo"></i><br>Ivette</a>
                 </div>
                 <div class="row text-center flex-nowrap mx-3">
-                    <a class="col github-link hvr-float" href=""><i class="fa-brands fa-github github-logo"></i><br>Mia</a>
-                    <a class="col github-link hvr-float" href=""><i class="fa-brands fa-github github-logo"></i><br>Raymond</a>
-                    <a class="col github-link hvr-float" href=""><i class="fa-brands fa-github github-logo"></i><br>Sam</a>
+                    <a class="col github-link hvr-float" href="https://github.com/MiaRasmussen05" target="_blank"><i class="fa-brands fa-github github-logo"></i><br>Mia</a>
+                    <a class="col github-link hvr-float" href="https://github.com/RVKIonesi" target="_blank"><i class="fa-brands fa-github github-logo"></i><br>Raymond</a>
+                    <a class="col github-link hvr-float" href="https://github.com/SamMartin92" target="_blank"><i class="fa-brands fa-github github-logo"></i><br>Sam</a>
                 </div>
             </div>
         </div>
 
     </footer>
     {% block postloadjs %}{% endblock %}
+
+
+    <script>
+        // Js for timing the alert to vanish after 4 seconds
+     message = document.getElementById("message");
+    
+    setTimeout(function(){ 
+       message.style.display = "none"; 
+    }, 4000);
+    // Timeout is 4 sec, you can change it
+    </script>
 </body>
 
 </html>
