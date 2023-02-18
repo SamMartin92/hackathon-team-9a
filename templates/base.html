@@ -106,9 +106,6 @@
     <div class="alert alert-success alert-css" id="message" data="modal" data-toggle="modal" role="alert"
         style="z-index:15">
         {{ message }}
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
     </div>
     {% endfor %}
     {% endif %}
@@ -160,6 +157,17 @@
 
     </footer>
     {% block postloadjs %}{% endblock %}
+
+
+    <script>
+        // Js for timing the alert to vanish after 4 seconds
+     message = document.getElementById("message");
+    
+    setTimeout(function(){ 
+       message.style.display = "none"; 
+    }, 4000);
+    // Timeout is 4 sec, you can change it
+    </script>
 </body>
 
 </html>
