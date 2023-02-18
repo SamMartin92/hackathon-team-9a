@@ -5,6 +5,7 @@
 
 .navbar-nav .nav-item .nav-link {
     color: white;
+    text-shadow: #234c3a 3px 0px 3px;
     font-weight: 500;
     padding: 20px;
 }
@@ -15,6 +16,7 @@
 
 #offcanvasNavbar {
     background-color: #239873;
+    text-shadow: #234c3a 3px 0px 3px;
     max-width: 70vw;
     color: white;
 }
