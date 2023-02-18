@@ -1,10 +1,12 @@
 from django.shortcuts import render
+
 from django.shortcuts import redirect
 from django.views import generic, View
 from django.views.generic import UpdateView, ListView, CreateView
 from django.contrib import messages
 from .models import NGO, Event
 from .forms import AddNGOForm
+
 
 # Create your views here.
 
@@ -24,3 +26,16 @@ class AddNGOForm(CreateView):
         form.save()
         messages.success(self.request, 'Your NGO has been added successfully!')
         return redirect('index')
+
+
+class NGOList(ListView):
+    """
+    List all NGOs
+    """
+    model = NGO
+    template_name = 'listview.html'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(NGOList, self).get_context_data(*args, **kwargs)
+        return context
+

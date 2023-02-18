@@ -1,0 +1,46 @@
+/* Navbar Styling */
+.navbar-custom-style {
+    background-image: linear-gradient(to right, #22e4ac, #234c3a);
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: white;
+    font-weight: 500;
+    padding: 20px;
+}
+
+.navbar {
+    box-shadow: 1px 0px 8px 3px #292929;
+}
+
+#offcanvasNavbar {
+    background-color: #239873;
+    max-width: 70vw;
+    color: white;
+}
+
+.navbar-toggler {
+    filter: invert(100);
+}
+
+/* Float Effect - Nav Links */
+.hvr-float {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-float:hover,
+.hvr-float:focus,
+.hvr-float:active {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+}
