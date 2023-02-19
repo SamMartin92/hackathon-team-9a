@@ -186,6 +186,35 @@ footer h5 {
     margin-top: 140px;
 }
 
+
+/* api page */
+#cause-select{
+    margin: 50px 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#result{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card>hr{
+    margin: 0;
+}
+
+.ngo-cards{
+    margin: 20px 0px;
+    max-height: 100%;
+}
+
+.logo-link-div{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
 /* Add NGO / Login / Logout / Signup Forms */
 .form p label, .signup label, .login label {
     margin-bottom: 0.5rem;

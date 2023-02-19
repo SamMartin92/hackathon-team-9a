@@ -32,7 +32,7 @@
     <script src="https://kit.fontawesome.com/92bb20ec43.js" crossorigin="anonymous"></script>
     {% endblock %}
 
-    <title> | {% block title %}{% endblock %}</title>
+    <title>Local Loving | {% block title %}{% endblock %}</title>
 
 </head>
 
@@ -73,7 +73,8 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link hvr-float" href="{% url 'setup' %}"><i
-                                        class="fa-solid fa-circle-question pe-3 d-lg-none"></i>How to Setup an NGO</a>
+                                        class="fa-solid fa-circle-question pe-3 d-lg-none"></i>
+                                        Setup an NGO</a>
                             </li>
                             <!-- Navbar links for authenticated users -->
                             {% if user.is_authenticated %}
@@ -106,6 +107,9 @@
     <div class="alert alert-success alert-css" id="message" data="modal" data-toggle="modal" role="alert"
         style="z-index:15">
         {{ message }}
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
     </div>
     {% endfor %}
     {% endif %}
@@ -156,9 +160,8 @@
         </div>
 
     </footer>
-    {% block postloadjs %}{% endblock %}
-
-
+    {% block postloadjs %}
+    <script src="{% static 'js/script.js' %}"></script>
     <script>
         // Js for timing the alert to vanish after 4 seconds
      message = document.getElementById("message");
@@ -168,6 +171,11 @@
     }, 4000);
     // Timeout is 4 sec, you can change it
     </script>
+    {% endblock %}
+
+
+
+    
 </body>
 
 </html>
