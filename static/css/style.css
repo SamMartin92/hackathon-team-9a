@@ -268,6 +268,7 @@ footer h5 {
     color: #FFF;
     padding: 20px 0 30px 0;
     margin-left: 15%;
+    margin-bottom: 10%;
 }
 
 .logout-form button, .signup button, .login button {
