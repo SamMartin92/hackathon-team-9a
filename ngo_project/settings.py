@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
+    'cloudinary',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
@@ -82,6 +84,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.request',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -95,9 +98,12 @@ WSGI_APPLICATION = 'ngo_project.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get('DATABASE_URL')),
-    'TEST': {
-        'NAME': 'test_blog'
-    }
+}
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dshwfyd60',
+    'API_KEY': '754625222234265',
+    'API_SECRET': os.environ.get('API_SECRET')
 }
 
 AUTHENTICATION_BACKENDS = [
@@ -157,6 +163,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static/"),
 )
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
+MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

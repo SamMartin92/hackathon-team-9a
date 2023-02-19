@@ -7,11 +7,15 @@
     <div class="row">
         <h1>{{ ngo.name }}</h1>
         <div class="col-md-6 col-sm-12 py-3">
-            <img src="#" class="d-block w-100" alt="{{ ngo.title }} image">
+            <img src="{{ ngo.image.url }}" class="d-block w-100" alt="{{ ngo.title }} image">
         </div>
         <div class="col-md-6 col-sm-12">
             <!-- NGO Details -->
             <div class="col intro pt-3 pb-5">{{ ngo.description | safe }}</div>
+            <div>
+                <p>Website:</p>
+                <a href="{{ ngo.website }}">{{ ngo.website }}</a>
+            </div>
         </div>
     </div>
 </div>
