@@ -323,7 +323,6 @@ footer h5 {
     background-image: linear-gradient(to bottom right, #A47A1E, #D3A84C, #D3A84C, #E6BE69, #FFD87C, #B58F3E, #956D13);
     color: #000;
     box-shadow: 0 0 3px #000;
-    margin-left: 45%;
 }
 
 .logout-form button:hover, .signup button:hover, .login button:hover {
@@ -331,6 +330,14 @@ footer h5 {
     /* background-color: rgb(35,77,58, 0.7); */
     font-weight: 700;
     color: #000;
+}
+
+.center {
+    text-align: center;
+}
+
+.sign-out {
+    margin-top: 15%;
 }
 
 #id_remember {
