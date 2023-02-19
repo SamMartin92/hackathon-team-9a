@@ -93,8 +93,8 @@ footer h5 {
 }
 
 #hackathon-link:hover {
-    color: blue;
-    text-shadow: none;
+    color: #e84610;
+    text-shadow: 2px 0 3px #FFF;
 }
 
 #fb-link {
@@ -161,6 +161,24 @@ footer h5 {
       }
 }
 
+.links {
+
+    color: #000000;
+    text-decoration: none;
+    
+}
+
+.links:hover {
+
+    color:#22e4ac;
+}
+
+.lighter {
+
+    font-weight: 400;
+    color: #D3A84C;
+    text-shadow: 1px 1px 1px #000;
+}
 /* Text over hero image */
 
 #cover-text h2 {
