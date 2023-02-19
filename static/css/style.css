@@ -150,8 +150,15 @@ footer h5 {
     width: 100%;
     background-color: #000000;
     /******* URL TO BE CHANGED *******/
-    background: url('https://img.freepik.com/free-vector/people-donate-money-charity_107791-16828.jpg?w=1380&t=st=1676725629~exp=1676726229~hmac=9b162f46bdb677e6361be7de600b9edb1aecace7cf57730e597638826362d7ed') no-repeat center center;
-    background-size: cover;
+    background: url('https://imgur.com/xT5W1lW.png') repeat 0 0;
+    background-position: cover;
+    animation: bg-fall 75s infinite linear;
+}
+
+@keyframes bg-fall {
+    100% {
+        background-position-x: -1893px;
+      }
 }
 
 /* Text over hero image */
