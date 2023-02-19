@@ -94,7 +94,10 @@ WSGI_APPLICATION = 'ngo_project.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL')),
+    'TEST': {
+        'NAME': 'test_blog'
+    }
 }
 
 AUTHENTICATION_BACKENDS = [
