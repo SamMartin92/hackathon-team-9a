@@ -43,6 +43,7 @@ body {
     color: white;
     font-weight: 500;
     padding: 20px;
+    text-shadow: #234c3a 2px 0px 3px;
 }
 
 .navbar {
@@ -53,6 +54,7 @@ body {
     background-color: #239873;
     max-width: 70vw;
     color: white;
+    text-shadow: #234c3a 2px 0px 3px;
 }
 
 .navbar-toggler {
@@ -184,16 +186,13 @@ footer h5 {
     margin-top: 140px;
 }
 
+
 /* api page */
 #cause-select{
     margin: 50px 30px;
     display: flex;
     align-items: center;
     flex-direction: column;
-}
-
-option::first-letter{
-    text-transform:capitalize;
 }
 
 #result{
@@ -214,4 +213,49 @@ option::first-letter{
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
+}
+
+/* Add NGO / Login / Logout / Signup Forms */
+.form p label, .signup label, .login label {
+    margin-bottom: 0.5rem;
+}
+
+.form p input, .form p select, .form p textarea, .signup input, .login input {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    background-color: var(--bs-form-control-bg);
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.375rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.modal-footer{
+    justify-content: center;
+}
+
+.logout-form button, .signup button, .login button {
+    background-color: #234D3B;
+    color: white;
+}
+
+.logout-form button:hover, .signup button:hover, .login button:hover {
+    border: #234D3B;
+    background-color: rgb(35,77,58, 0.7);
+    color: white;
+}
+
+#id_remember {
+    width: 1em;
+    height: 1em;
+    padding: 0;
+    display: inline-block;
 }

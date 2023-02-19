@@ -73,7 +73,8 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link hvr-float" href="{% url 'setup' %}"><i
-                                        class="fa-solid fa-circle-question pe-3 d-lg-none"></i>Setup an NGO</a>
+                                        class="fa-solid fa-circle-question pe-3 d-lg-none"></i>
+                                        Setup an NGO</a>
                             </li>
                             <!-- Navbar links for authenticated users -->
                             {% if user.is_authenticated %}
@@ -161,7 +162,20 @@
     </footer>
     {% block postloadjs %}
     <script src="{% static 'js/script.js' %}"></script>
+    <script>
+        // Js for timing the alert to vanish after 4 seconds
+     message = document.getElementById("message");
+    
+    setTimeout(function(){ 
+       message.style.display = "none"; 
+    }, 4000);
+    // Timeout is 4 sec, you can change it
+    </script>
     {% endblock %}
+
+
+
+    
 </body>
 
 </html>
