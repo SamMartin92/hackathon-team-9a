@@ -7,13 +7,15 @@
         <div class="row">
             {% for ngo in ngo_list %}
             <div class="col">
-                <a class="" href="#">
+                <a class="links" href="#">
                     <!-- Featured image -->
                     <img src="#" class="d-block w-100" alt="{{ ngo.name }} image">
                 </a>
-                <div class="mb-3">
-                    <h5>{{ ngo.name }}</h5>
-                    <a class="links" href="#">
+                <div class="mb-3 ">
+                    
+                    <h5 class="links">{{ ngo.name }}</h5>
+
+                    <a class="links lighter" href="#">
                         <p>#{{ ngo.category }}</p>
                     </a>
                 </div>
