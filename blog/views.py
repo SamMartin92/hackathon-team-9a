@@ -69,3 +69,7 @@ def about(request):
 
 def setup(request):
     return render(request, 'setup.html')
+
+
+def int_ngos(request):
+    return render(request, 'int-ngos.html')

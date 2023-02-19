@@ -8,4 +8,5 @@ urlpatterns = [
     path('<int:pk>', views.NGODetails.as_view(), name='detail'),
     path('about/', views.about, name='about'),
     path('setup/', views.setup, name='setup'),
+    path('int-ngos/', views.int_ngos, name='int-ngos'),
 ]

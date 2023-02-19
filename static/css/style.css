@@ -183,3 +183,35 @@ footer h5 {
 .mt-nav {
     margin-top: 140px;
 }
+
+/* api page */
+#cause-select{
+    margin: 50px 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+option::first-letter{
+    text-transform:capitalize;
+}
+
+#result{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card>hr{
+    margin: 0;
+}
+
+.ngo-cards{
+    margin: 20px 0px;
+    max-height: 100%;
+}
+
+.logo-link-div{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
