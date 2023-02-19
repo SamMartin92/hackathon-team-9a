@@ -25,3 +25,4 @@ class TestUrls(SimpleTestCase):
         url= reverse('add_ngo')
         self.assertEquals(resolve(url).func.view_class, AddNGOForm)
     
+    
