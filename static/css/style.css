@@ -233,6 +233,7 @@ footer h5 {
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     font-weight: 400;
+    box-shadow: 0 0 3px #000;
     line-height: 1.5;
     color: var(--bs-body-color);
     background-color: var(--bs-form-control-bg);
@@ -249,15 +250,40 @@ footer h5 {
     justify-content: center;
 }
 
-.logout-form button, .signup button, .login button {
+.login-signup-head {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.p {
+    text-align: center;
+}
+
+.box-log-sign {
+    width: 70%;
     background-color: #234D3B;
-    color: white;
+    box-shadow: 0 0 4px #000;
+    border-radius: 10px;
+    text-shadow: 2px 0px 3px #000;
+    color: #FFF;
+    padding: 20px 0 30px 0;
+    margin-left: 15%;
+}
+
+.logout-form button, .signup button, .login button {
+    /* background-color: #234D3B; */
+    /* color: white; */
+    background-image: linear-gradient(to bottom right, #A47A1E, #D3A84C, #D3A84C, #E6BE69, #FFD87C, #B58F3E, #956D13);
+    color: #000;
+    box-shadow: 0 0 3px #000;
+    margin-left: 45%;
 }
 
 .logout-form button:hover, .signup button:hover, .login button:hover {
-    border: #234D3B;
-    background-color: rgb(35,77,58, 0.7);
-    color: white;
+    /* border: #234D3B; */
+    /* background-color: rgb(35,77,58, 0.7); */
+    font-weight: 700;
+    color: #000;
 }
 
 #id_remember {
