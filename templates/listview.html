@@ -9,13 +9,13 @@
             <div class="col">
                 <a class="" href="{% url 'detail' ngo.id %}">
                     <!-- Featured image -->
-                    <img src="#" class="d-block w-100" alt="{{ ngo.name }} image">
+                    <img src="{{ ngo.image.url }}" class="d-block w-100" alt="{{ ngo.name }} image">
                 </a>
                 <div class="mb-3">
                     <a class="ngo-heading-link" href="{% url 'detail' ngo.id %}"><h5>{{ ngo.name }}</h5></a>
-                    <a class="links" href="#">
-                        <p>#{{ ngo.category }}</p>
-                    </a>
+                    <p class="links" >
+                        #{{ ngo.category }}
+                    </p>
                 </div>
             </div>
         {% if forloop.counter|divisibleby:4 %}
