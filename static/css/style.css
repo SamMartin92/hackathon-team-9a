@@ -346,3 +346,24 @@ footer h5 {
     padding: 0;
     display: inline-block;
 }
+
+/* SETUP PAGE */
+
+.banner-left, .banner-right {
+    background: url('https://imgur.com/KLXviAe.png') repeat 0 0;
+    background-position: cover;
+    background-size: contain;
+    animation: banner-fall 175s infinite linear;
+}
+
+.banner-right {
+    background: url('https://imgur.com/zgTsxpO.png') repeat 0 0;
+    background-position: cover;
+    background-size: contain;
+}
+
+@keyframes banner-fall {
+    100% {
+        background-position-y: -1893px;
+      }
+}
