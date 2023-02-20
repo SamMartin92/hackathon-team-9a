@@ -11,11 +11,11 @@
 <div class="container">
     <h3 class="my-4">Feature NGO</h3>
     {% if feature_ngo %}
-    <div class="row">
-        <div class="col-3">
-            <a href="{% url 'detail' feature_ngo.id %}" class="links"><img src="{{ feature_ngo.image.url }}" class="d-block w-100" alt="{{ feature_ngo.name }} image"></a>
+    <div class="row ngo-box ngo-box-feature">
+        <div class="col-lg-3 col-md-5 col-sm-5">
+            <a href="{% url 'detail' feature_ngo.id %}" class="links"><img src="{{ feature_ngo.image.url }}" class="d-block w-100 ngo-box-img" alt="{{ feature_ngo.name }} image"></a>
         </div>
-        <div class="col-9">
+        <div class="col-lg-9 col-md-7 col-sm-12">
             <div class="mb-3">
                 <a href="{% url 'detail' feature_ngo.id %}" class="links"><h5>{{ feature_ngo.name }}</h5></a>
                 <p>{{ feature_ngo.description }}</p>
@@ -29,14 +29,17 @@
     <h3 class="my-4">Recent NGOs</h3>
     <div class="row">
         {% for ngo in ngos %}
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 ngo-box ngo-box-index">
             <a class="links" href="{% url 'detail' ngo.id %}">
                 <!-- Featured image -->
-                <img src="{{ ngo.image.url }}" class="d-block w-100" alt="{{ ngo.name }} image">
+                <img src="{{ ngo.image.url }}" class="d-block w-100 ngo-img" alt="{{ ngo.name }} image">
             </a>
-            <div class="mb-3">
-                <a href="{% url 'detail' ngo.id %}">
-                    <h5 class="links">{{ ngo.name }}</h5>
+            <div class="hr">
+                <hr>
+            </div>
+            <div class="mb-3 ngo-text">
+                <a href="{% url 'detail' ngo.id %}" class="links">
+                    <h5>{{ ngo.name }}</h5>
                 </a>
                 <a class="links lighter" href="#">
                     <p>#{{ ngo.category }}</p>

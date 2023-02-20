@@ -148,9 +148,8 @@ footer h5 {
 #hero-image {
     height: 100%;
     width: 100%;
-    background-color: #000000;
-    /******* URL TO BE CHANGED *******/
-    background: url('https://imgur.com/xT5W1lW.png') repeat 0 0;
+    background-color: #000;
+    background: url('https://imgur.com/ggsL2z6.png') repeat 0 0;
     background-position: cover;
     animation: bg-fall 75s infinite linear;
 }
@@ -162,19 +161,15 @@ footer h5 {
 }
 
 .links {
-
-    color: #000000;
+    color: #000;
     text-decoration: none;
-    
 }
 
 .links:hover {
-
     color:#22e4ac;
 }
 
 .lighter {
-
     font-weight: 400;
     color: #D3A84C;
     text-shadow: 1px 1px 1px #000;
@@ -297,7 +292,6 @@ footer h5 {
     color: #FFF;
     padding: 20px 0 30px 0;
     margin-bottom: 10%;
-
 }
 
 .btn-primary {
@@ -309,8 +303,6 @@ footer h5 {
 }
 
 .btn-primary:hover {
-    /* border: #234D3B; */
-    /* background-color: rgb(35,77,58, 0.7); */
     font-weight: 700;
     color: #000;
     border-color: #A47A1E;
@@ -366,4 +358,53 @@ footer h5 {
     100% {
         background-position-y: -1893px;
       }
+}
+
+.ngo-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.ngo-box {
+    border: 1px solid #505050;
+    border-radius: 8px;
+    padding: 0;
+    margin: 0 0 25px 20px;
+}
+
+.ngo-box-index {
+    width: 320px;
+    margin: 0 0 35px 10px;
+}
+
+.ngo-box-feature {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.ngo-box .ngo-text {
+    padding: 2% 5%;
+}
+
+.ngo-img{
+    height: 200px;
+    object-fit: fill;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+}
+
+.ngo-heading-link {
+    color: #000;
+    text-decoration: none;
+}
+
+.ngo-heading-link:hover {
+    color:#22e4ac;
+}
+
+@media screen and (max-width:765px) {
+    .ngo-box-img {
+        margin: 10px 0 20px 0;
+    }
 }
