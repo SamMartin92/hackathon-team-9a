@@ -3,17 +3,20 @@
 {% block content %}
 
 <div class="container mt-nav">
-    <div class="row col-12 mt-3 left">
-        <div class="row">
+    <!-- <div class="row col-12 mt-3 left"> -->
+        <div class="row ngo-wrapper">
             {% for ngo in ngo_list %}
-            <div class="col">
+            <div class="col-lg-3 col-md-6 col-sm-10 ngo-box">
                 <a class="" href="{% url 'detail' ngo.id %}">
                     <!-- Featured image -->
-                    <img src="{{ ngo.image.url }}" class="d-block w-100" alt="{{ ngo.name }} image">
+                    <img src="{{ ngo.image.url }}" class="d-block w-100 ngo-img" alt="{{ ngo.name }} image">
                 </a>
-                <div class="mb-3">
-                    <a class="ngo-heading-link" href="{% url 'detail' ngo.id %}"><h5>{{ ngo.name }}</h5></a>
-                    <p class="links" >
+                <div class="hr">
+                    <hr>
+                </div>
+                <div class="mb-3 ngo-text">
+                    <a class="links" href="{% url 'detail' ngo.id %}"><h5>{{ ngo.name }}</h5></a>
+                    <p class="links lighter">
                         #{{ ngo.category }}
                     </p>
                 </div>
@@ -24,7 +27,7 @@
         {% endif %}
         {% endfor %}
         </div>
-    </div>
+    <!-- </div> -->
 </div>
 
 {% endblock %}
