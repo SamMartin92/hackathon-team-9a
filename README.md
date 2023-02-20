@@ -92,7 +92,7 @@ Wireframes were designed by [Ant](https://github.com/Ant2210) created using figm
 - Automated testing was conducted on the urls.py file.
 - A test was conducted on the response of each url and passed. See screenshot below:
 
-![Tests](static/readme/wireframes_mobile.PNG)
+![Tests](static/readme/tests.PNG)
 
 - Encountered a postgres error
   which did not allow us to progress with any further testing within the timeframe allowable for the hackathon so manual testing was employed instead for th rest of the project. Error below
