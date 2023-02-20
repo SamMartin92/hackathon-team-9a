@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %} {% load cloudinary %}
 {% load crispy_forms_tags %}
 
 
@@ -20,7 +20,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     {% endblock %}
 
     {% block extracss %}{% endblock %}
@@ -32,7 +32,7 @@
     <script src="https://kit.fontawesome.com/92bb20ec43.js" crossorigin="anonymous"></script>
     {% endblock %}
 
-    <title> | {% block title %}{% endblock %}</title>
+    <title>Local Loving | {% block title %}{% endblock %}</title>
 
 </head>
 
@@ -40,7 +40,7 @@
     <!-- NAVBAR goes here -->
     <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary navbar-custom-style">
         <div class="container-fluid">
-            <a id="logo" class="navbar-brand" href="#">
+            <a id="logo" class="navbar-brand" href="{% url 'index' %}">
                 <img src="{% static 'media/images/logo.png' %}" alt="Local Loving Logo" height="75px" width="73px">
                 <h2 class="d-inline-block align-middle lh-1">Local<br>Loving</h2>
             </a>
@@ -60,7 +60,7 @@
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-4">
                             <!-- Navbar links for all users -->
                             <li class="nav-item">
-                                <a class="nav-link hvr-float" href="#"><i
+                                <a class="nav-link hvr-float" href="{% url 'index' %}"><i
                                         class="fa-solid fa-house pe-3 d-lg-none"></i>Home</a>
                             </li>
                             <li class="nav-item">
@@ -68,12 +68,18 @@
                                         class="fa-solid fa-pen pe-3 d-lg-none"></i>NGOs</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link hvr-float" href="#"><i
+                                <a class="nav-link hvr-float" href="{% url 'about' %}"><i
                                         class="fa-solid fa-circle-info pe-3 d-lg-none"></i>About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link hvr-float" href="#"><i
-                                        class="fa-solid fa-circle-question pe-3 d-lg-none"></i>How to Setup an NGO</a>
+                                <a class="nav-link hvr-float" href="{% url 'setup' %}"><i
+                                        class="fa-solid fa-circle-question pe-3 d-lg-none"></i>
+                                        Setup an NGO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link hvr-float" href="{% url 'int-ngos' %}"><i
+                                        class="fa-solid fa-circle-question pe-3 d-lg-none"></i>
+                                        Find an NGO</a>
                             </li>
                             <!-- Navbar links for authenticated users -->
                             {% if user.is_authenticated %}
@@ -81,19 +87,19 @@
                                 <a class="nav-link hvr-float" href="{% url 'add_ngo' %}"><i
                                         class="fa-solid fa-circle-user pe-3 d-lg-none"></i>Add Your NGO</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item ps-lg-5 pt-4 pt-lg-0">
                                 <a class="nav-link hvr-float" href="{% url 'account_logout' %}"><i
                                         class="fa-solid fa-circle-user pe-3 d-lg-none"></i>Logout</a>
                             </li>
                             {% else %}
                             <!-- Navbar links for all users -->
-                            <li class="nav-item">
+                            <li class="nav-item ps-lg-5 pt-4 pt-lg-0">
                                 <a class="nav-link hvr-float" href="{% url 'account_login' %}"><i
                                         class="fa-solid fa-circle-user pe-3 d-lg-none"></i>Login</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link hvr-float" href="{% url 'account_signup' %}"><i
-                                        class="fa-solid fa-circle-user pe-3 d-lg-none"></i>Sign Up</a>
+                                        class="fa-solid fa-user-plus pe-3 d-lg-none"></i>Sign Up</a>
                             </li>
                             {% endif %}
                     </div>
@@ -120,8 +126,61 @@
     {% endblock %}
 
     <!-- FOOTER goes here -->
+    <footer id="footer" class="container-fluid">
+        <div class="container-fluid row py-2">
+            <div class="col-12 col-md-4 text-center m-auto">
+                <h5>Contact or follow us...</h5>
+                <a id="fb-link" class="footer-socials px-2 hvr-float" href="https://www.facebook.com/" target="_blank"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a id="instagram-link" class="footer-socials px-2 hvr-float" href="https://www.instagram.com/" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a id="twitter-link" class="footer-socials px-2 hvr-float" href="https://twitter.com/" target="_blank"><i
+                        class="fa-brands fa-twitter"></i></a>
+                <a id="linkedin-link" class="footer-socials px-2 hvr-float" href="https://www.linkedin.com/" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a id="email-link" class="footer-socials px-2 hvr-float" href="mailto:info@localloving.com" target="_blank"><i
+                        class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div id="footer-text" class="col-12 col-md-4 text-center">
+                <p>
+                    This website is for educational purposes only and does not represent a real company, NGO or charity.
+                    It was created for the sole purpose of participation in the <a id="hackathon-link"
+                        href="https://hackathon.codeinstitute.net/" target="_blank">Code Institute Hackathon</a>
+                    February 2023. <br>© Team 9 2023. All Rights Reserved.
+                </p>
+            </div>
+            <div class="col-12 col-md-4 m-auto">
+                <div class="row text-center flex-nowrap">
+                    <a class="col github-link hvr-float" href="https://github.com/Ant2210" target="_blank"><i class="fa-brands fa-github github-logo"></i><br>Ant</a>
+                    <a class="col github-link hvr-float" href="https://github.com/CarmenCantudo" target="_blank"><i class="fa-brands fa-github github-logo"></i><br>Carmen</a>
+                    <a class="col github-link hvr-float" href="https://github.com/HPCarey" target="_blank"><i class="fa-brands fa-github github-logo"></i><br>Hannah</a>
+                    <a class="col github-link hvr-float" href="https://github.com/IvetteMcDermott" target="_blank"><i class="fa-brands fa-github github-logo"></i><br>Ivette</a>
+                </div>
+                <div class="row text-center flex-nowrap mx-3">
+                    <a class="col github-link hvr-float" href="https://github.com/MiaRasmussen05" target="_blank"><i class="fa-brands fa-github github-logo"></i><br>Mia</a>
+                    <a class="col github-link hvr-float" href="https://github.com/RVKIonesi" target="_blank"><i class="fa-brands fa-github github-logo"></i><br>Raymond</a>
+                    <a class="col github-link hvr-float" href="https://github.com/SamMartin92" target="_blank"><i class="fa-brands fa-github github-logo"></i><br>Sam</a>
+                </div>
+            </div>
+        </div>
 
-    {% block postloadjs %}{% endblock %}
+    </footer>
+    {% block postloadjs %}
+    <script src="{% static 'js/script.js' %}"></script>
+    <script>
+        // Js for timing the alert to vanish after 4 seconds
+     message = document.getElementById("message");
+    
+    setTimeout(function(){ 
+       message.style.display = "none"; 
+    }, 4000);
+    // Timeout is 4 sec, you can change it
+    </script>
+    {% endblock %}
+
+
+
+    
 </body>
 
 </html>

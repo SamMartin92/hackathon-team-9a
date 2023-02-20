@@ -1,9 +1,25 @@
 {% extends "base.html" %}
 
+{% block title %} NGO {% endblock %}
+
 {% block content %}
 
 <!-- What goes here will render as body of the page -->
-
-
+<div class="container">
+    <div class="row m-5">
+        <h1>{{ ngo.name }}</h1>
+        <div class="col-md-6 col-sm-12 py-3">
+            <img src="{{ ngo.image.url }}" class="d-block w-100" alt="{{ ngo.title }} image">
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <!-- NGO Details -->
+            <div class="col intro pt-3 pb-5">{{ ngo.description | safe }}</div>
+            <div>
+                <p>Website:</p>
+                <a href="{{ ngo.website }}">{{ ngo.website }}</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

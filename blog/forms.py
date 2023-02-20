@@ -9,4 +9,4 @@ class AddNGOForm(forms.ModelForm):
 
     class Meta:
         model = NGO
-        fields = ('name', 'category', 'location', 'description', 'geo_extend', 'phone', 'email', 'website',)
+        fields = ('name', 'category', 'location', 'description', 'geo_extend', 'phone', 'email', 'website', 'image')

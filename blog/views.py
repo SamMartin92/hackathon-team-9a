@@ -1,6 +1,4 @@
-from django.shortcuts import render
-
-from django.shortcuts import redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
 from django.views.generic import UpdateView, ListView, CreateView
 from django.contrib import messages
@@ -11,8 +9,15 @@ from .forms import AddNGOForm
 # Create your views here.
 
 
-def index(request):
-    return render(request, 'index.html')
+class Index(generic.ListView):
+    def get(self, request):
+        ngos = NGO.objects.all()[:8]
+        feature_ngo = NGO.objects.all()[NGO.objects.count()-1]
+        context = {
+                "ngos": ngos,
+                "feature_ngo": feature_ngo,
+                }
+        return render(request, 'index.html', context)
 
 
 class AddNGOForm(CreateView):
@@ -34,8 +39,37 @@ class NGOList(ListView):
     """
     model = NGO
     template_name = 'listview.html'
+    ngo_list = NGO.objects.all()
 
     def get_context_data(self, *args, **kwargs):
         context = super(NGOList, self).get_context_data(*args, **kwargs)
         return context
 
+
+class NGODetails(View):
+    """
+    NGO details
+    """
+    def get(self, request, *args, **kwargs):
+        queryset = NGO.objects.all()
+        ngo = get_object_or_404(queryset, pk=self.kwargs['pk'])
+
+        return render(
+            request,
+            "detail.html",
+            {
+                "ngo": ngo,
+            },
+        )
+
+
+def about(request):
+    return render(request, 'about.html')
+
+
+def setup(request):
+    return render(request, 'setup.html')
+
+
+def int_ngos(request):
+    return render(request, 'int-ngos.html')
