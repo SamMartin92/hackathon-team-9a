@@ -70,6 +70,11 @@ We set up a project and used the kanban board to organise and coordinate tasks.
   - This is generated using an API from every.org
 
  ![About Us](static/readme/find-an-ngo.png)
+ 
+## APIs:
+
+- In this project, an API from [every.org](https://www.every.org/) was used for the Find An NGO page.
+- This API allows users to find an API based on the cause they select. 
 
 ## Wireframes:
 Wireframes were designed by [Ant](https://github.com/Ant2210) created using figma.
