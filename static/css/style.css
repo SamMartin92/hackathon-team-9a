@@ -291,7 +291,7 @@ footer h5 {
     text-shadow: 2px 0px 3px #000;
     color: #FFF;
     padding: 20px 0 30px 0;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 .btn-primary {
@@ -403,8 +403,8 @@ footer h5 {
     color:#22e4ac;
 }
 
-@media screen and (max-width:765px) {
-    .ngo-box-img {
-        margin: 10px 0 20px 0;
-    }
+/* ABOUT PAGE */
+
+.about {
+    margin: 4% auto;
 }
