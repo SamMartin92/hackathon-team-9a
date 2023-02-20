@@ -24,7 +24,7 @@ class NGO(models.Model):
     ]
     name = models.CharField(max_length=100, unique=True, null=False, blank=False)
     category = models.CharField(max_length=20, choices=categ, null=False, blank=False)
-    location = models.CharField(max_length=60, unique=True, null=False, blank=False)
+    location = models.CharField(max_length=60, null=False, blank=False)
     geo_extend = models.CharField(max_length=20, choices=geo, null=False, blank=False)
     description = models.TextField(null=False)
     phone = models.IntegerField()
