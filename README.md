@@ -1,7 +1,5 @@
 # **A Dubug Cause** : *Hackathon Feb 2023*
 
-![Responsive](assets/images/am-i-responsive.png)
-
 ## Project Overview
 A website informing users of fundrasing and charity events in their local community, as well as providing general information about NGOs, fundraising and charities.
 
@@ -22,7 +20,7 @@ We set up a project and used the kanban board to organise and coordinate tasks.
 **Aceptance criteria**:
 - The homepage features a moving collage of NGO and charity related images as well as a short sentence describing the goal of the site. 
 
-![Landing page]()
+![Landing page](static/readme/landing-page.PNG)
 
 - It also features a nav bar which allows user to navigate to other pages like the "About Us" page is they want more information about the site.
 - The Navbar for visiting users that are not logged in displays a Login and Sign Up link.
@@ -30,7 +28,7 @@ We set up a project and used the kanban board to organise and coordinate tasks.
 ![Nav bar](static/readme/navbar.png)
 -For logged in users the navbar gives access to the add Ngo page and a logout link
 
-![Nav bar logged in]()
+![Nav bar logged in](static/readme/nav-bar-logged-in.PNG)
 
 
 
@@ -56,7 +54,7 @@ We set up a project and used the kanban board to organise and coordinate tasks.
 
    **Acceptance criteria** : 
    - The site features blog posts and search features for users to learn more.
-   ![]()
+   ![Blog Post](static/readme/set-up-ngo.PNG)
 
    -There is also a "How to Set Up an NGO" page for users.
 
