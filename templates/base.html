@@ -76,6 +76,11 @@
                                         class="fa-solid fa-circle-question pe-3 d-lg-none"></i>
                                         Setup an NGO</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link hvr-float" href="{% url 'int-ngos' %}"><i
+                                        class="fa-solid fa-circle-question pe-3 d-lg-none"></i>
+                                        Find an NGO</a>
+                            </li>
                             <!-- Navbar links for authenticated users -->
                             {% if user.is_authenticated %}
                             <li class="nav-item">
