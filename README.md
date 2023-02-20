@@ -1,4 +1,4 @@
-# **Name goes here** : *Hackathon Feb 2023*
+# **A Dubug Cause** : *Hackathon Feb 2023*
 
 ![Responsive](assets/images/am-i-responsive.png)
 
@@ -25,6 +25,15 @@ We set up a project and used the kanban board to organise and coordinate tasks.
 ![Landing page]()
 
 - It also features a nav bar which allows user to navigate to other pages like the "About Us" page is they want more information about the site.
+- The Navbar for visiting users that are not logged in displays a Login and Sign Up link.
+
+![Nav bar](static/readme/navbar.png)
+-For logged in users the navbar gives access to the add Ngo page and a logout link
+
+![Nav bar logged in]()
+
+
+
 
 ![About Us](static/readme/about-us.png)
 
