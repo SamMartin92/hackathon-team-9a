@@ -91,7 +91,7 @@ Wireframes were designed by [Ant](https://github.com/Ant2210) created using figm
 
 ## Deployment
 
-- This site was developed in (Gitpod)[https://www.gitpod.io/] and deployed to (Heroku)(https://www.heroku.com/)]
+- This site was developed in [Gitpod](https://www.gitpod.io/) and deployed to [Heroku](https://www.heroku.com/)
 - It was built using the Django framework.
 - The site was developed by previewing the site in the browser through Port 8000 in Gitpod by running the command ```python manage.py runserver``` in the terminal. Changes and entries to the workspace were then committed and pushed to this Github repository.
 ### Setting up the project in Gitpod workspace:
