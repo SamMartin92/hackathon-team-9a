@@ -30,7 +30,7 @@ class NGO(models.Model):
     phone = models.IntegerField()
     email = models.EmailField(max_length=60, unique=True, null=False, blank=False)
     website = models.URLField(max_length=100)
-    image = models.ImageField(upload_to='ngo_images/', null=False, blank=False)
+    image = models.ImageField(upload_to='ngo_images/', default='media/ngo_images/default.jpg', blank=False)
 
     def __str__(self):
         return self.name
